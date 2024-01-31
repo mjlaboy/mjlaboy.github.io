@@ -1,0 +1,54 @@
+<!Doctype HTML>
+<html>
+     <h1> Develop an Analog Clock </h1>
+	 <title> Clock </title>
+	 
+	 </head>
+	 <canvas id='mycanvas' width='400' height=
+	 '400' style='background-color:black'>
+	 </canvas>
+	
+	 </body>
+	 </html>
+	 
+<scrip>
+const canvas = document.getElementByid('canvas');
+let radius = canvas.height / 2;
+radius = radius * 0.90
+drawclock() ;
+
+// Drawing clock background
+function drawClock()  {
+ ctx.arc{0, 0, radius, 0 , 2*math.PI)
+ ctx.fillstyle = "white";
+ ctx.fill();
+ drawFace(ctx, radius);
+ 
+ }
+ //drawing face
+ function drawFace(ctx, radius) {
+  cont grad = ctx.createradialGradient(0,0,radius*0.955, 0,0
+  radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad. addColorStop (1, '#3334);
+  ctx.beginPath () ;
+  ctx.arc (0, 0, radius, 0, 2*Math. PI);
+  ctx.filistyle = 'white'
+   ctx.fill ()
+   ct. strokeStyle = grad;
+   ct. linewidth = radius*0.1;
+   ctx.stroke ();
+   ctx.beginPath () ;
+   ctx.arc (0, 0, radius*0.1, 0, 2*Math.PI) ;
+   ctx.fillstyle = '#333'
+   ctx.fill ();
+
+  
+  /define a function which will Draw Numbers
+    function drawNumbers (ctx, radius) {
+    ctx.font = radius*0.15 + 'px arial' 
+ 
+  
+  
+  
